@@ -2,14 +2,15 @@ package com.microservices.userservice.entities;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(schema = "user")
 @Getter
+@Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -22,6 +23,9 @@ public class User {
     String name;
     @Column(name = "email", unique = true)
     String email;
-    @Column(name = "about", length = 20)
+    @Column(name = "about", length = 1000)
     String about;
+
+    @Transient
+    List<Rating> ratings = new ArrayList<>();
 }
