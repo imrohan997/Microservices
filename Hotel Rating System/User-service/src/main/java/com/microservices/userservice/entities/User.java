@@ -7,6 +7,9 @@ import lombok.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Entity class to store User.
+ */
 @Entity
 @Table(schema = "user")
 @Getter

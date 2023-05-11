@@ -1,22 +1,20 @@
 package com.microservices.userservice.entities;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * Entity class to store rating.
- */
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Rating {
-    String ratingId;
-    String hotelId;
-    String userId;
-    Integer rating;
+public class Hotel {
 
-    Hotel hotel;
+    String id;
+    String name;
+    String location;
+    String about;
 }

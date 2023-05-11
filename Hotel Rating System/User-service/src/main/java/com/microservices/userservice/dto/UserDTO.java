@@ -6,6 +6,9 @@ import lombok.Getter;
 
 import java.util.UUID;
 
+/**
+ * DTO class to accept the POST request on server.
+ */
 @Getter
 public class UserDTO {
 
